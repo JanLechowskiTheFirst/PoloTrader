@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+#following must be set with accordingly to business logic and enum values
+period: THIRTY_MINUTES
+currencyPair: USDT_TRX
+budgetBalancePercent: 70
+orderBookPriceDepth: 4
+
+poloniexAuthentication:
+  secret:
+  key: 

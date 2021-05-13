@@ -1,0 +1,21 @@
+MACD
+all lengths problems:
+    misses always candle, as true crossing is during candle and not at the close price of the previous candle
+    loses on peeks and all fast/rapid changes
+    small changes too - horizontal trend for example are bad
+
+all lengths advantages:AY
+    good trend prediction
+    likes smooth changes
+    on big rises has a lot profit from buying one candle before signal (up to 30%),
+    mainly because of spikes at single candles
+
+
+2h:
+    still has spikes, especially on the buy size
+    loses on peeks at buy/sell candles a lot
+
+day:
+    less money in a year
+    very smooth, perfect for MACD
+    has a lot of horizontal trend

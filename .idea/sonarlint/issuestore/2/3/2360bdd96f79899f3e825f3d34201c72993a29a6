@@ -1,0 +1,8 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(“´ÎÕýÿÿÿÿ
+A
+java:S1612",Replace this lambda with a method reference.(Á¾÷<
+a
+java:S3358C"DExtract this nested ternary operation into an independent statement.(¹µÜß8èÞ™ºƒ/
+ˆ
+java:S1130"mRemove the declaration of thrown exception 'java.lang.IllegalArgumentException' which is a runtime exception.(ó’Úýÿÿÿÿ

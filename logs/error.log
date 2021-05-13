@@ -1,0 +1,169 @@
+2021-04-01 00:39:41,929 [main] ERROR o.springframework.boot.SpringApplication           - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:807)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:788)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.example.PoloniexTrader.PoloniexTraderApplication.main(PoloniexTraderApplication.java:12)
+Caused by: java.lang.NullPointerException: Cannot invoke "com.example.PoloniexTrader.service.PoloniexService.getCurrencies()" because "this.poloniexService" is null
+	at com.example.PoloniexTrader.Runner.run(Runner.java:20)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:804)
+	... 5 common frames omitted
+2021-04-01 00:40:37,190 [main] ERROR o.springframework.boot.SpringApplication           - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:807)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:788)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.example.PoloniexTrader.PoloniexTraderApplication.main(PoloniexTraderApplication.java:12)
+Caused by: org.springframework.web.client.RestClientException: Error while extracting response for type [java.util.Map<java.lang.String, com.example.PoloniexTrader.dto.Currency>] and content type [application/json]; nested exception is org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `com.example.PoloniexTrader.dto.Currency` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('Invalid command.'); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.example.PoloniexTrader.dto.Currency` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('Invalid command.')
+ at [Source: (PushbackInputStream); line: 1, column: 10] (through reference chain: java.util.LinkedHashMap["error"])
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:120)
+	at org.springframework.web.client.RestTemplate$ResponseEntityResponseExtractor.extractData(RestTemplate.java:1034)
+	at org.springframework.web.client.RestTemplate$ResponseEntityResponseExtractor.extractData(RestTemplate.java:1017)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:777)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:710)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:630)
+	at com.example.PoloniexTrader.service.PoloniexService.getCurrencies(PoloniexService.java:162)
+	at com.example.PoloniexTrader.Runner.run(Runner.java:22)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:804)
+	... 5 common frames omitted
+Caused by: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `com.example.PoloniexTrader.dto.Currency` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('Invalid command.'); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.example.PoloniexTrader.dto.Currency` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('Invalid command.')
+ at [Source: (PushbackInputStream); line: 1, column: 10] (through reference chain: java.util.LinkedHashMap["error"])
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:285)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:243)
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:105)
+	... 13 common frames omitted
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.example.PoloniexTrader.dto.Currency` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('Invalid command.')
+ at [Source: (PushbackInputStream); line: 1, column: 10] (through reference chain: java.util.LinkedHashMap["error"])
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:63)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1455)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1081)
+	at com.fasterxml.jackson.databind.deser.ValueInstantiator._createFromStringFallbacks(ValueInstantiator.java:371)
+	at com.fasterxml.jackson.databind.deser.std.StdValueInstantiator.createFromString(StdValueInstantiator.java:323)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromString(BeanDeserializerBase.java:1408)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:176)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:166)
+	at com.fasterxml.jackson.databind.deser.std.MapDeserializer._readAndBindStringKeyMap(MapDeserializer.java:540)
+	at com.fasterxml.jackson.databind.deser.std.MapDeserializer.deserialize(MapDeserializer.java:377)
+	at com.fasterxml.jackson.databind.deser.std.MapDeserializer.deserialize(MapDeserializer.java:29)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4526)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3521)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:274)
+	... 15 common frames omitted
+2021-04-01 01:07:04,720 [main] ERROR o.springframework.boot.SpringApplication           - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:807)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:788)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.example.PoloniexTrader.PoloniexTraderApplication.main(PoloniexTraderApplication.java:12)
+Caused by: org.springframework.web.client.RestClientException: Error while extracting response for type [class [Lcom.example.PoloniexTrader.dto.chartData.ChartData;] and content type [application/json]; nested exception is org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `[Lcom.example.PoloniexTrader.dto.chartData.ChartData;` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `[Lcom.example.PoloniexTrader.dto.chartData.ChartData;` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:120)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:777)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:710)
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:333)
+	at com.example.PoloniexTrader.service.PoloniexService.getTradeHistory(PoloniexService.java:110)
+	at com.example.PoloniexTrader.simulator.ShitMarketTest.runTest(ShitMarketTest.java:27)
+	at com.example.PoloniexTrader.Runner.run(Runner.java:23)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:804)
+	... 5 common frames omitted
+Caused by: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `[Lcom.example.PoloniexTrader.dto.chartData.ChartData;` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `[Lcom.example.PoloniexTrader.dto.chartData.ChartData;` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:285)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:243)
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:105)
+	... 12 common frames omitted
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `[Lcom.example.PoloniexTrader.dto.chartData.ChartData;` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1468)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1242)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1148)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.handleNonArray(ObjectArrayDeserializer.java:329)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:175)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:21)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4526)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3521)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:274)
+	... 14 common frames omitted
+2021-04-01 01:09:05,148 [main] ERROR o.springframework.boot.SpringApplication           - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:807)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:788)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.example.PoloniexTrader.PoloniexTraderApplication.main(PoloniexTraderApplication.java:12)
+Caused by: org.springframework.web.client.RestClientException: Error while extracting response for type [class [Lcom.example.PoloniexTrader.dto.chartData.ChartData;] and content type [application/json]; nested exception is org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `[Lcom.example.PoloniexTrader.dto.chartData.ChartData;` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `[Lcom.example.PoloniexTrader.dto.chartData.ChartData;` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:120)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:777)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:710)
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:333)
+	at com.example.PoloniexTrader.service.PoloniexService.getTradeHistory(PoloniexService.java:110)
+	at com.example.PoloniexTrader.simulator.ShitMarketTest.runTest(ShitMarketTest.java:32)
+	at com.example.PoloniexTrader.Runner.run(Runner.java:23)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:804)
+	... 5 common frames omitted
+Caused by: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `[Lcom.example.PoloniexTrader.dto.chartData.ChartData;` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `[Lcom.example.PoloniexTrader.dto.chartData.ChartData;` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:285)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:243)
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:105)
+	... 12 common frames omitted
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `[Lcom.example.PoloniexTrader.dto.chartData.ChartData;` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1468)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1242)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1148)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.handleNonArray(ObjectArrayDeserializer.java:329)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:175)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:21)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4526)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3521)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:274)
+	... 14 common frames omitted
+2021-04-01 01:10:55,466 [main] ERROR o.springframework.boot.SpringApplication           - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:807)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:788)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.example.PoloniexTrader.PoloniexTraderApplication.main(PoloniexTraderApplication.java:12)
+Caused by: org.springframework.web.client.RestClientException: Error while extracting response for type [class [Lcom.example.PoloniexTrader.dto.chartData.ChartData;] and content type [application/json]; nested exception is org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `[Lcom.example.PoloniexTrader.dto.chartData.ChartData;` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `[Lcom.example.PoloniexTrader.dto.chartData.ChartData;` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:120)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:777)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:710)
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:333)
+	at com.example.PoloniexTrader.service.PoloniexService.getTradeHistory(PoloniexService.java:110)
+	at com.example.PoloniexTrader.simulator.ShitMarketTest.runTest(ShitMarketTest.java:32)
+	at com.example.PoloniexTrader.Runner.run(Runner.java:23)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:804)
+	... 5 common frames omitted
+Caused by: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize instance of `[Lcom.example.PoloniexTrader.dto.chartData.ChartData;` out of START_OBJECT token; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `[Lcom.example.PoloniexTrader.dto.chartData.ChartData;` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:285)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:243)
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:105)
+	... 12 common frames omitted
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `[Lcom.example.PoloniexTrader.dto.chartData.ChartData;` out of START_OBJECT token
+ at [Source: (PushbackInputStream); line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1468)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1242)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1148)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.handleNonArray(ObjectArrayDeserializer.java:329)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:175)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:21)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4526)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3521)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:274)
+	... 14 common frames omitted

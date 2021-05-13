@@ -1,0 +1,6 @@
+
+h	java:S116"NRename this field "BTC" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë—§Ëúÿÿÿÿ
+i	java:S116	"ORename this field "USDT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è¡øœşÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(È½ËÑùÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤±úÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤±úÿÿÿÿ
